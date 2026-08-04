@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Save Contact</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-    .btn { padding: 12px 24px; background-color: #2b8a3e; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
-  </style>
+  <!-- Instant redirect to contact.vcf -->
+  <meta http-equiv="refresh" content="0; url=contact.vcf">
+  <title>Redirecting...</title>
 </head>
 <body>
-  <h2>Add My Contact Information</h2>
-  <p>Click below to download and save my contact details directly to your phone.</p>
-  <br>
-  <!-- Points directly to contact.vcf in the same repository -->
-  <a href="contact.vcf" class="btn" download>Save to Phone</a>
+  <script>
+    // JavaScript fallback redirect
+    window.location.href = "contact.vcf";
+  </script>
+  <p>If you are not redirected automatically, <a href="contact.vcf">click here</a>.</p>
 </body>
 </html>
