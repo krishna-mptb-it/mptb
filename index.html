@@ -126,7 +126,7 @@ let currentIndex = 0;
       console.error("Invalid playlist item at index", currentIndex);
       // advance safely
       currentIndex = (currentIndex + 1) % playlist.length;
-      rotationTimeout = setTimeout(rotatePages, 15000);
+      rotationTimeout = setTimeout(rotatePages, 60000);
       return;
     }
 
