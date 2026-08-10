@@ -29,7 +29,7 @@
             overflow: hidden;
             border: none;
             background-color: #000;
-	    transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
         }
 
         #controlBtn {
@@ -89,15 +89,15 @@
         // does stop someone from redirecting the loop to a different
         // (possibly malicious) page via devtools.
         var playlist = Object.freeze([
-            { url: "https://app.powerbi.com/view?r=eyJrIjoiMjhkNDIwYmUtZjQ4NS00NzlkLTkyNjAtN2NlNTc5MGIyNWI1IiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=89f4222f499db8b7151e", seconds: 15 },
+            { url: "https://app.powerbi.com/view?r=eyJrIjoiMjhkNDIwYmUtZjQ4NS00NzlkLTkyNjAtN2NlNTc5MGIyNWI1IiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=89f4222f499db8b7151e", seconds: 60 },
             { url: "https://app.powerbi.com/view?r=eyJrIjoiODg4ZGU0MmEtOGQxYS00ZWUwLTg2YzAtMjIwYzFlMzNlMGY2IiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9", seconds: 30 },
-            { url: "https://app.powerbi.com/view?r=eyJrIjoiZTRkMzY4OWItODkxOC00Y2RmLTgzNjUtOWYxNmNjYjRjMzZhIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=96f23636355369177a32", seconds: 15 },
-            { url: "https://app.powerbi.com/view?r=eyJrIjoiMWNlYjU1MWUtYWE2Yi00MGVlLWI5ZjktNWFiNjBmYjlhYTIwIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=8fdd5fa7970fdfe09973", seconds: 15 },
-            { url: "https://app.powerbi.com/view?r=eyJrIjoiYTE1N2IwM2MtOGZkNC00NmMwLTg4MmYtNzFiMjZjOGYwMWVmIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=f3fc2c2f149db14e5fb9", seconds: 15 },
+            { url: "https://app.powerbi.com/view?r=eyJrIjoiZTRkMzY4OWItODkxOC00Y2RmLTgzNjUtOWYxNmNjYjRjMzZhIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=96f23636355369177a32", seconds: 60 },
+            { url: "https://app.powerbi.com/view?r=eyJrIjoiMWNlYjU1MWUtYWE2Yi00MGVlLWI5ZjktNWFiNjBmYjlhYTIwIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=8fdd5fa7970fdfe09973", seconds: 60 },
+            { url: "https://app.powerbi.com/view?r=eyJrIjoiYTE1N2IwM2MtOGZkNC00NmMwLTg4MmYtNzFiMjZjOGYwMWVmIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=f3fc2c2f149db14e5fb9", seconds: 60 },
             { url: "https://app.powerbi.com/view?r=eyJrIjoiYzFiYzNjMjMtMmY1Zi00NDhmLTg3MzItNzEzZjcxMzBlOTE5IiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=e951a6008d400334c680", seconds: 60 },
-            { url: "https://app.powerbi.com/view?r=eyJrIjoiNzc1NTAzNjEtMDRkNC00NDQwLTg3NTgtMjdkNDVkMDRlZTllIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9", seconds: 15 },
-            { url: "https://app.powerbi.com/view?r=eyJrIjoiMWM5ODE2ZmEtZjRmMC00YWVjLWJmMzUtMDhhZGYwMmY1OWNmIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9", seconds: 15 },
-            { url: "https://app.powerbi.com/view?r=eyJrIjoiNWFlNzg4OWItZTc3NS00ZTY3LWFmNmUtNzM2NWMwMjMyOWFmIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9", seconds: 15 }
+            { url: "https://app.powerbi.com/view?r=eyJrIjoiNzc1NTAzNjEtMDRkNC00NDQwLTg3NTgtMjdkNDVkMDRlZTllIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9", seconds: 60 },
+            { url: "https://app.powerbi.com/view?r=eyJrIjoiMWM5ODE2ZmEtZjRmMC00YWVjLWJmMzUtMDhhZGYwMmY1OWNmIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9", seconds: 60 },
+            { url: "https://app.powerbi.com/view?r=eyJrIjoiNWFlNzg4OWItZTc3NS00ZTY3LWFmNmUtNzM2NWMwMjMyOWFmIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9", seconds: 60 }
         ]);
 
 let currentIndex = 0;
@@ -136,8 +136,8 @@ let currentIndex = 0;
       console.error("Blocked disallowed URL:", currentItem.url);
     }
 
-    // default to 15 seconds if invalid
-    const waitTime = (Number.isFinite(currentItem.seconds) ? currentItem.seconds : 15) * 1000;
+    // default to 60 seconds if invalid
+    const waitTime = (Number.isFinite(currentItem.seconds) ? currentItem.seconds : 60) * 1000;
     currentIndex = (currentIndex + 1) % playlist.length;
 
     clearTimeout(rotationTimeout);
