@@ -15,8 +15,8 @@
         content="default-src 'none';
                  script-src 'self' 'unsafe-inline';
                  style-src 'self' 'unsafe-inline';
-                 connect-src 'self' https://app.powerbi.com;
-                 frame-src https://app.powerbi.com data: blob:;
+                 connect-src 'self' https://flyn.link/souvenirs-and-brochures https://flyn.link/boat-clubs-and-water-bodies https://flyn.link/homestays https://flyn.link/rural-tourism https://flyn.link/agencies-events-roadshows https://flyn.link/land-parcels https://flyn.link/Project-locations https://flyn.link/district-wise-shooting-permission;
+                 frame-src https://flyn.link/souvenirs-and-brochures https://flyn.link/boat-clubs-and-water-bodies https://flyn.link/homestays https://flyn.link/rural-tourism https://flyn.link/agencies-events-roadshows https://flyn.link/land-parcels https://flyn.link/Project-locations https://flyn.link/district-wise-shooting-permission data: blob:;
                  base-uri 'none';
                  form-action 'none';" />
   <title>MPTB Dashboard — Pi Kiosk</title>
@@ -118,13 +118,27 @@
     const EXTERNAL_PLAYLIST_FILE = "./playlist.json";
 
     // Allowed origins - only these will be allowed to be set into the iframe.
-    const ALLOWED_ORIGINS = ["https://app.powerbi.com"];
+    const ALLOWED_ORIGINS = [
+      "https://flyn.link/souvenirs-and-brochures",
+      "https://flyn.link/boat-clubs-and-water-bodies",
+      "https://flyn.link/homestays",
+      "https://flyn.link/rural-tourism",
+      "https://flyn.link/agencies-events-roadshows",
+      "https://flyn.link/land-parcels",
+      "https://flyn.link/Project-locations",
+      "https://flyn.link/district-wise-shooting-permission"
+    ];
 
     // Embedded fallback playlist (kept frozen)
     const EMBED_PLAYLIST = Object.freeze([
-      { url: "https://app.powerbi.com/view?r=eyJrIjoiMjhkNDIwYmUtZjQ4NS00NzlkLTkyNjAtN2NlNTc5MGIyNWI1IiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=89f4222f499db8b7151e", seconds: 60 },
-      { url: "https://app.powerbi.com/view?r=eyJrIjoiODg4ZGU0MmEtOGQxYS00ZWUwLTg2YzAtMjIwYzFlMzNlMGY2IiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9", seconds: 30 },
-      { url: "https://app.powerbi.com/view?r=eyJrIjoiZTRkMzY4OWItODkxOC00Y2RmLTgzNjUtOWYxNmNjYjRjMzZhIiwidCI6IjkyZjYwN2VmLWFmNjQtNGZmMC04Y2UzLTM3YWFlNGQ2Y2Y5OSJ9&pageName=96f23636355369177a32", seconds: 60 }
+      { url: "https://flyn.link/souvenirs-and-brochures", seconds: 60 },
+      { url: "https://flyn.link/boat-clubs-and-water-bodies", seconds: 60 },
+      { url: "https://flyn.link/homestays", seconds: 60 },
+      { url: "https://flyn.link/rural-tourism", seconds: 60 },
+      { url: "https://flyn.link/agencies-events-roadshows", seconds: 60 },
+      { url: "https://flyn.link/land-parcels", seconds: 60 },
+      { url: "https://flyn.link/Project-locations", seconds: 60 },
+      { url: "https://flyn.link/district-wise-shooting-permission", seconds: 60 }
       // ...add more or override via playlist.json
     ]);
 
@@ -326,14 +340,14 @@
        Then open http://<pi-ip>:8000/ in the Pi's browser.
 
     2) Recommended Chromium kiosk flags (example command):
-       /usr/bin/chromium-browser --kiosk --start-fullscreen --noerrdialogs --disable-infobars --disable-session-crashed-bubble --disable-translate --overscroll-history-navigation=0 http://localhost:8000/
+       /usr/bin/chromium-browser --kiosk --start-fullscreen --noerrdialogs --disable-infobars --disable-session-crashed-bubble --disable-translate --overscroll-history-navigation=0 http://localho[...]
 
        On Raspberry Pi OS (64-bit) the binary might be /usr/bin/chromium or chromium-browser.
 
     3) External playlist:
        Create playlist.json in the same directory with a JSON array:
        [
-         { "url": "https://app.powerbi.com/view?r=...", "seconds": 60 },
+         { "url": "https://flyn.link/souvenirs-and-brochures", "seconds": 60 },
          ...
        ]
 
